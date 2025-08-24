@@ -1,9 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ShoppingCart, MessageCircle } from "lucide-react";
-import laptopImage from "@/assets/laptop-hero.jpg";
-import smartphoneImage from "@/assets/smartphone-hero.jpg";
-import accessoriesImage from "@/assets/accessories-hero.jpg";
 import { openWhatsApp } from "@/utils/whatsapp";
 
 export const Products = () => {
@@ -11,40 +8,64 @@ export const Products = () => {
     {
       title: "Laptops",
       description: "Premium laptops from top brands",
-      image: laptopImage,
+      image: "/lovable-uploads/55ba5704-9b6d-4a6d-8877-30b28ca314fc.png",
       products: [
-        { name: "HP Pavilion 15-dy5855wm", description: "Intel Core i5, 8GB RAM, 512GB SSD, Windows 11", price: "Call for Price" },
-        { name: "MacBook Air M2", description: "Apple M2 chip, 8GB RAM, 256GB SSD, Silver", price: "Call for Price" },
-        { name: "MacBook Pro 13\"", description: "Apple M1 chip, 8GB RAM, 256GB SSD, Space Gray", price: "Call for Price" },
-        { name: "HP EliteBook", description: "Intel Core i7, 16GB RAM, 512GB SSD, Business Grade", price: "Call for Price" },
-        { name: "Lenovo ThinkPad", description: "Intel Core i5, 8GB RAM, 256GB SSD, Black", price: "Call for Price" },
-        { name: "MacBook Air 13\"", description: "Apple M1 chip, 8GB RAM, 512GB SSD, Gold", price: "Call for Price" }
+        { 
+          name: "HP Pavilion 15-dy5855wm", 
+          description: "Intel Core i5, 8GB RAM, 512GB SSD, Windows 11", 
+          price: "₦96,000", 
+          image: "/lovable-uploads/13168799-5ed7-44d7-bed1-f27c1a570554.png" 
+        },
+        { 
+          name: "MacBook Pro 16\"", 
+          description: "Apple M1 Pro chip, 16GB RAM, 512GB SSD, Space Gray", 
+          price: "Call for Price", 
+          image: "/lovable-uploads/55ba5704-9b6d-4a6d-8877-30b28ca314fc.png" 
+        },
+        { 
+          name: "HP Laptop Silver", 
+          description: "Intel Core i5, 8GB RAM, 512GB SSD, Silver", 
+          price: "Call for Price", 
+          image: "/lovable-uploads/8e46c26b-816d-4b57-8737-e73fb0a1864d.png" 
+        }
       ]
     },
     {
       title: "Smartphones",
       description: "Latest smartphones and accessories",
-      image: smartphoneImage,
+      image: "/lovable-uploads/ee03ca51-7f64-45ed-bf7f-ecaf88369fd8.png",
       products: [
-        { name: "iPhone 15 Pro Max", description: "256GB, Blue Titanium, A17 Pro chip", price: "Call for Price" },
-        { name: "iPhone 14", description: "128GB, Blue, iOS 16", price: "Call for Price" },
-        { name: "Samsung Galaxy Z Fold 5", description: "256GB, Phantom Black, Foldable Display", price: "Call for Price" },
-        { name: "Samsung Galaxy S24", description: "256GB, Phantom Black, AI Camera", price: "Call for Price" },
-        { name: "iPhone 13 Pro", description: "128GB, Sierra Blue, ProRAW Camera", price: "Call for Price" },
-        { name: "Samsung Galaxy Note", description: "256GB, Mystic Bronze, S Pen included", price: "Call for Price" }
+        { 
+          name: "iPhone 12 Pro", 
+          description: "128GB, Sierra Blue, ProRAW Camera", 
+          price: "Call for Price", 
+          image: "/lovable-uploads/ee03ca51-7f64-45ed-bf7f-ecaf88369fd8.png" 
+        },
+        { 
+          name: "iPhone 14", 
+          description: "128GB, Blue, iOS 16", 
+          price: "Call for Price", 
+          image: "/lovable-uploads/bac8453a-a012-4148-bb8b-7ef56b418219.png" 
+        }
       ]
     },
     {
       title: "Accessories",
       description: "Essential tech accessories and gadgets",
-      image: accessoriesImage,
+      image: "/lovable-uploads/626ca002-fba4-4226-be5a-783d178998f6.png",
       products: [
-        { name: "Mini Wireless Keyboard K-03", description: "Compact design, Bluetooth connectivity, White", price: "Call for Price" },
-        { name: "USB GPS Module U-blox7", description: "GPS/GLONASS navigation, Automotive & Marine use", price: "Call for Price" },
-        { name: "Wireless Mouse & Keyboard Set", description: "Ergonomic design, long battery life", price: "Call for Price" },
-        { name: "External Hard Drive 2TB", description: "USB 3.0, portable storage, Black", price: "Call for Price" },
-        { name: "Universal Laptop Charger", description: "Compatible with HP, Dell, Lenovo", price: "Call for Price" },
-        { name: "Laptop Cooling Pad", description: "LED fans, adjustable height, USB powered", price: "Call for Price" }
+        { 
+          name: "Mini Wireless Keyboard K-03", 
+          description: "Compact design, Bluetooth connectivity, White", 
+          price: "Call for Price", 
+          image: "/lovable-uploads/626ca002-fba4-4226-be5a-783d178998f6.png" 
+        },
+        { 
+          name: "M.2 SSD External Enclosure", 
+          description: "USB 3.1, GHD-M6, High-speed data transfer", 
+          price: "Call for Price", 
+          image: "/lovable-uploads/f1c70230-8a0d-479e-a81d-f8b2338964b1.png" 
+        }
       ]
     }
   ];
@@ -88,6 +109,13 @@ export const Products = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 stagger-children">
                 {category.products.map((product, productIndex) => (
                   <Card key={productIndex} className="card-elevated hover:shadow-lg transition-all duration-300 hover-scale animate-fade-in group">
+                    <div className="relative overflow-hidden rounded-t-lg">
+                      <img 
+                        src={product.image} 
+                        alt={product.name}
+                        className="w-full h-48 object-cover group-hover:scale-105 transition-all duration-300"
+                      />
+                    </div>
                     <CardHeader>
                       <CardTitle className="text-lg group-hover:text-primary transition-colors">{product.name}</CardTitle>
                       <CardDescription>{product.description}</CardDescription>
