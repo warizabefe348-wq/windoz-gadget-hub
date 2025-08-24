@@ -1,18 +1,42 @@
 export const openWhatsApp = (phoneNumber: string, message?: string) => {
-  const formattedMessage = message ? `?text=${encodeURIComponent(message)}` : '';
-  const whatsappUrl = `https://wa.me/${phoneNumber}${formattedMessage}`;
+  const formattedMessage = message ? encodeURIComponent(message) : '';
   
-  // Try multiple methods to ensure WhatsApp opens
-  try {
-    // Method 1: Standard wa.me link
-    const newWindow = window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
-    
-    // Method 2: If blocked, try WhatsApp protocol (mobile)
-    if (!newWindow || newWindow.closed || typeof newWindow.closed === 'undefined') {
-      window.location.href = `whatsapp://send?phone=${phoneNumber}&text=${encodeURIComponent(message || '')}`;
+  // Create different URL formats
+  const wameUrl = `https://wa.me/${phoneNumber}${message ? `?text=${formattedMessage}` : ''}`;
+  const whatsappProtocol = `whatsapp://send?phone=${phoneNumber}${message ? `&text=${formattedMessage}` : ''}`;
+  const webWhatsapp = `https://web.whatsapp.com/send?phone=${phoneNumber}${message ? `&text=${formattedMessage}` : ''}`;
+  
+  // Function to try opening URL
+  const tryOpenUrl = (url: string, target: string = '_blank') => {
+    try {
+      const newWindow = window.open(url, target, 'noopener,noreferrer');
+      if (newWindow && !newWindow.closed) {
+        return true;
+      }
+    } catch (error) {
+      console.log('Failed to open:', url);
     }
+    return false;
+  };
+  
+  // Method 1: Try wa.me in new tab
+  if (tryOpenUrl(wameUrl)) return;
+  
+  // Method 2: Try WhatsApp protocol (for mobile apps)
+  if (tryOpenUrl(whatsappProtocol, '_self')) return;
+  
+  // Method 3: Try web WhatsApp
+  if (tryOpenUrl(webWhatsapp)) return;
+  
+  // Method 4: Force navigation to wa.me
+  try {
+    window.location.href = wameUrl;
   } catch (error) {
-    // Method 3: Fallback to direct URL assignment
-    window.location.href = whatsappUrl;
+    // Method 5: Ultimate fallback - copy number and show alert
+    navigator.clipboard?.writeText(phoneNumber).then(() => {
+      alert(`WhatsApp couldn't open automatically. Phone number ${phoneNumber} has been copied to clipboard. You can paste it in WhatsApp manually.`);
+    }).catch(() => {
+      alert(`Please contact us via WhatsApp at: ${phoneNumber}${message ? `\n\nMessage: ${message}` : ''}`);
+    });
   }
 };
