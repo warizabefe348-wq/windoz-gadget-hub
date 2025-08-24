@@ -5,10 +5,11 @@ import { Services } from "@/components/Services";
 import { Products } from "@/components/Products";
 import { WhyChooseUs } from "@/components/WhyChooseUs";
 import { Contact } from "@/components/Contact";
+import { Footer } from "@/components/Footer";
 
 const Index = () => {
   return (
-    <>
+    <div className="animate-fade-in">
       <Navbar />
       <main className="min-h-screen pt-16">
         <Hero />
@@ -18,7 +19,8 @@ const Index = () => {
         <WhyChooseUs />
         <Contact />
       </main>
-    </>
+      <Footer />
+    </div>
   );
 };
 

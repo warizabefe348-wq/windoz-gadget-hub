@@ -57,13 +57,13 @@ export const Products = () => {
   };
 
   return (
-    <section id="products" className="py-20 bg-background">
+    <section id="products" className="py-20 bg-background animate-fade-in">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+        <div className="text-center mb-16 stagger-children">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 animate-scale-in">
             Our <span className="text-primary">Products</span>
           </h2>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in-up">
             Discover our wide range of quality tech products from trusted brands
           </p>
         </div>
@@ -76,7 +76,7 @@ export const Products = () => {
                   <img 
                     src={category.image} 
                     alt={category.title}
-                    className="w-full h-64 object-cover rounded-lg shadow-lg"
+                    className="w-full h-64 object-cover rounded-lg shadow-lg hover-scale transition-all duration-300"
                   />
                 </div>
                 <div className="lg:w-2/3">
@@ -85,11 +85,11 @@ export const Products = () => {
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 stagger-children">
                 {category.products.map((product, productIndex) => (
-                  <Card key={productIndex} className="card-elevated hover:shadow-lg transition-shadow">
+                  <Card key={productIndex} className="card-elevated hover:shadow-lg transition-all duration-300 hover-scale animate-fade-in group">
                     <CardHeader>
-                      <CardTitle className="text-lg">{product.name}</CardTitle>
+                      <CardTitle className="text-lg group-hover:text-primary transition-colors">{product.name}</CardTitle>
                       <CardDescription>{product.description}</CardDescription>
                     </CardHeader>
                     <CardContent>
@@ -97,9 +97,9 @@ export const Products = () => {
                         <span className="text-lg font-semibold text-primary">{product.price}</span>
                       </div>
                       <div className="flex gap-2">
-                        <Button 
+                         <Button 
                           size="sm" 
-                          className="flex-1 bg-green-600 hover:bg-green-700 text-white font-semibold transition-all duration-200 transform hover:scale-105"
+                          className="flex-1 bg-green-600 hover:bg-green-700 text-white font-semibold transition-all duration-200 transform hover:scale-105 hover-scale"
                           onClick={() => {
                             console.log(`Attempting to contact WhatsApp for ${product.name}`);
                             handleWhatsAppContact(product.name);
@@ -111,7 +111,7 @@ export const Products = () => {
                         <Button 
                           size="sm" 
                           variant="outline"
-                          className="border-green-600 text-green-600 hover:bg-green-600 hover:text-white transition-all duration-200"
+                          className="border-green-600 text-green-600 hover:bg-green-600 hover:text-white transition-all duration-200 hover-scale"
                           onClick={() => {
                             console.log(`Attempting to contact WhatsApp for ${product.name}`);
                             handleWhatsAppContact(product.name);

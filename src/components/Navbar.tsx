@@ -1,10 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone, MessageCircle } from "lucide-react";
 import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { openWhatsApp } from "@/utils/whatsapp";
+import { useLoading } from "@/hooks/useLoading";
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const { showLoading } = useLoading();
 
   const handleCall = () => {
     window.open('tel:+2347059781334', '_self');
@@ -15,12 +19,12 @@ export const Navbar = () => {
     openWhatsApp('2348139316493', message);
   };
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+  const handleNavigation = (path: string) => {
+    showLoading();
     setIsMenuOpen(false);
+    setTimeout(() => {
+      navigate(path);
+    }, 100);
   };
 
   return (
@@ -28,47 +32,47 @@ export const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center gap-3">
+          <Link to="/" className="flex items-center gap-3 hover-scale">
             <img 
               src="/lovable-uploads/f140baa2-b5bd-42f0-90e4-ba9c518a9342.png" 
               alt="Windoz Tech Global Gadgets" 
-              className="h-10 w-auto"
+              className="h-10 w-auto transition-transform duration-300 hover:rotate-12"
             />
             <div className="hidden sm:block">
               <h1 className="text-lg font-bold text-primary">Windoz Tech</h1>
               <p className="text-xs text-muted-foreground">Global Gadgets</p>
             </div>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-6">
             <button 
-              onClick={() => scrollToSection('hero')}
-              className="text-foreground hover:text-primary transition-colors"
+              onClick={() => handleNavigation('/')}
+              className="text-foreground hover:text-primary transition-colors story-link"
             >
               Home
             </button>
             <button 
-              onClick={() => scrollToSection('about')}
-              className="text-foreground hover:text-primary transition-colors"
+              onClick={() => handleNavigation('/about')}
+              className="text-foreground hover:text-primary transition-colors story-link"
             >
               About
             </button>
             <button 
-              onClick={() => scrollToSection('services')}
-              className="text-foreground hover:text-primary transition-colors"
+              onClick={() => handleNavigation('/services')}
+              className="text-foreground hover:text-primary transition-colors story-link"
             >
               Services
             </button>
             <button 
-              onClick={() => scrollToSection('products')}
-              className="text-foreground hover:text-primary transition-colors"
+              onClick={() => handleNavigation('/products')}
+              className="text-foreground hover:text-primary transition-colors story-link"
             >
               Products
             </button>
             <button 
-              onClick={() => scrollToSection('contact')}
-              className="text-foreground hover:text-primary transition-colors"
+              onClick={() => handleNavigation('/contact')}
+              className="text-foreground hover:text-primary transition-colors story-link"
             >
               Contact
             </button>
@@ -95,44 +99,44 @@ export const Navbar = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden bg-background border-t py-4">
+          <div className="md:hidden bg-background border-t py-4 animate-slide-in-right">
             <div className="flex flex-col gap-4">
               <button 
-                onClick={() => scrollToSection('hero')}
+                onClick={() => handleNavigation('/')}
                 className="text-left text-foreground hover:text-primary transition-colors"
               >
                 Home
               </button>
               <button 
-                onClick={() => scrollToSection('about')}
+                onClick={() => handleNavigation('/about')}
                 className="text-left text-foreground hover:text-primary transition-colors"
               >
                 About
               </button>
               <button 
-                onClick={() => scrollToSection('services')}
+                onClick={() => handleNavigation('/services')}
                 className="text-left text-foreground hover:text-primary transition-colors"
               >
                 Services
               </button>
               <button 
-                onClick={() => scrollToSection('products')}
+                onClick={() => handleNavigation('/products')}
                 className="text-left text-foreground hover:text-primary transition-colors"
               >
                 Products
               </button>
               <button 
-                onClick={() => scrollToSection('contact')}
+                onClick={() => handleNavigation('/contact')}
                 className="text-left text-foreground hover:text-primary transition-colors"
               >
                 Contact
               </button>
               <div className="flex items-center gap-2 pt-2">
-                <Button size="sm" variant="outline" onClick={handleCall}>
+                <Button size="sm" variant="outline" onClick={handleCall} className="hover-scale">
                   <Phone className="h-4 w-4 mr-2" />
                   Call
                 </Button>
-                <Button size="sm" onClick={handleWhatsApp}>
+                <Button size="sm" onClick={handleWhatsApp} className="hover-scale">
                   <MessageCircle className="h-4 w-4 mr-2" />
                   WhatsApp
                 </Button>
