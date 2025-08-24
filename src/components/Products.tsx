@@ -99,8 +99,8 @@ export const Products = () => {
                             handleWhatsAppContact(product.name);
                           }}
                         >
-                          <MessageCircle className="h-4 w-4 mr-2" />
-                          Buy via WhatsApp
+                          <ShoppingCart className="h-4 w-4 mr-2" />
+                          Buy Now
                         </Button>
                         <Button 
                           size="sm" 
