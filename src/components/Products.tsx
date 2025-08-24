@@ -92,16 +92,23 @@ export const Products = () => {
                       <div className="flex gap-2">
                         <Button 
                           size="sm" 
-                          className="flex-1 bg-primary hover:bg-primary/90"
-                          onClick={() => handleWhatsAppContact(product.name)}
+                          className="flex-1 bg-green-600 hover:bg-green-700 text-white font-semibold transition-all duration-200 transform hover:scale-105"
+                          onClick={() => {
+                            console.log(`Attempting to contact WhatsApp for ${product.name}`);
+                            handleWhatsAppContact(product.name);
+                          }}
                         >
-                          <ShoppingCart className="h-4 w-4 mr-2" />
-                          Buy Now
+                          <MessageCircle className="h-4 w-4 mr-2" />
+                          Buy via WhatsApp
                         </Button>
                         <Button 
                           size="sm" 
                           variant="outline"
-                          onClick={() => handleWhatsAppContact(product.name)}
+                          className="border-green-600 text-green-600 hover:bg-green-600 hover:text-white transition-all duration-200"
+                          onClick={() => {
+                            console.log(`Attempting to contact WhatsApp for ${product.name}`);
+                            handleWhatsAppContact(product.name);
+                          }}
                         >
                           <MessageCircle className="h-4 w-4" />
                         </Button>
