@@ -4,6 +4,7 @@ import { ShoppingCart, MessageCircle } from "lucide-react";
 import laptopImage from "@/assets/laptop-hero.jpg";
 import smartphoneImage from "@/assets/smartphone-hero.jpg";
 import accessoriesImage from "@/assets/accessories-hero.jpg";
+import { openWhatsApp } from "@/utils/whatsapp";
 
 export const Products = () => {
   const productCategories = [
@@ -45,7 +46,7 @@ export const Products = () => {
   const handleWhatsAppContact = (productName: string) => {
     const message = `Hi! I'm interested in buying the ${productName}. Can you provide more information about price and availability?`;
     const phoneNumber = "2348139316493";
-    window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, '_blank');
+    openWhatsApp(phoneNumber, message);
   };
 
   return (

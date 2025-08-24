@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { MapPin, Phone, Mail, Facebook, Instagram, MessageCircle } from "lucide-react";
+import { openWhatsApp } from "@/utils/whatsapp";
 
 export const Contact = () => {
   const contactInfo = [
@@ -96,7 +97,7 @@ export const Contact = () => {
             <Button 
               size="lg" 
               variant="outline"
-              onClick={() => window.open('https://wa.me/2348139316493', '_blank')}
+              onClick={() => openWhatsApp('2348139316493', 'Hi! I would like to know more about your services.')}
             >
               <MessageCircle className="mr-2 h-5 w-5" />
               WhatsApp Us

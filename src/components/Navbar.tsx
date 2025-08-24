@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone, MessageCircle } from "lucide-react";
 import { useState } from "react";
+import { openWhatsApp } from "@/utils/whatsapp";
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,7 +12,7 @@ export const Navbar = () => {
 
   const handleWhatsApp = () => {
     const message = "Hi! I would like to know more about your services.";
-    window.open(`https://wa.me/2348139316493?text=${encodeURIComponent(message)}`, '_blank');
+    openWhatsApp('2348139316493', message);
   };
 
   const scrollToSection = (sectionId: string) => {
