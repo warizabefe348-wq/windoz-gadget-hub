@@ -42,14 +42,14 @@ export const Products = () => {
     }
   ];
 
-  const handleWhatsAppContact = () => {
-    const message = "Hi! I'm interested in your products. Can you provide more information?";
+  const handleWhatsAppContact = (productName: string) => {
+    const message = `Hi! I'm interested in buying the ${productName}. Can you provide more information about price and availability?`;
     const phoneNumber = "2348139316493";
     window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, '_blank');
   };
 
   return (
-    <section className="py-20 bg-background">
+    <section id="products" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
@@ -92,7 +92,7 @@ export const Products = () => {
                         <Button 
                           size="sm" 
                           className="flex-1 bg-primary hover:bg-primary/90"
-                          onClick={handleWhatsAppContact}
+                          onClick={() => handleWhatsAppContact(product.name)}
                         >
                           <ShoppingCart className="h-4 w-4 mr-2" />
                           Buy Now
@@ -100,7 +100,7 @@ export const Products = () => {
                         <Button 
                           size="sm" 
                           variant="outline"
-                          onClick={handleWhatsAppContact}
+                          onClick={() => handleWhatsAppContact(product.name)}
                         >
                           <MessageCircle className="h-4 w-4" />
                         </Button>

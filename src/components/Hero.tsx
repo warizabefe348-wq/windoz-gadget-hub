@@ -19,7 +19,7 @@ export const Hero = () => {
       
       <div className="relative z-10 container mx-auto px-4 text-center">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-7xl font-bold text-primary-foreground mb-6 leading-tight">
+          <h1 id="hero" className="text-5xl md:text-7xl font-bold text-primary-foreground mb-6 leading-tight">
             Your Trusted Partner in 
             <span className="accent-gradient bg-clip-text text-transparent"> Technology & Gadgets</span>
           </h1>

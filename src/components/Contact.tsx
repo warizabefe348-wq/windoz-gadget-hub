@@ -13,7 +13,7 @@ export const Contact = () => {
     {
       icon: Phone,
       title: "Call Us",
-      details: "+234 813 931 6493 | +234 705 978 1334",
+      details: "+234 705 978 1334 (Call) | +234 813 931 6493 (WhatsApp)",
       action: "Call Now"
     },
     {
@@ -31,7 +31,7 @@ export const Contact = () => {
   ];
 
   return (
-    <section className="py-20 bg-background">
+    <section id="contact" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
