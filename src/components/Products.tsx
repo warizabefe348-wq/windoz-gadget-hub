@@ -8,25 +8,43 @@ export const Products = () => {
     {
       title: "Laptops",
       description: "Premium laptops from top brands",
-      image: "/lovable-uploads/55ba5704-9b6d-4a6d-8877-30b28ca314fc.png",
+      image: "/lovable-uploads/0dcc4a15-5159-467a-8d75-6a1abb2675ab.png",
       products: [
         { 
-          name: "HP Pavilion 15-dy5855wm", 
-          description: "Intel Core i5, 8GB RAM, 512GB SSD, Windows 11", 
-          price: "₦96,000", 
-          image: "/lovable-uploads/13168799-5ed7-44d7-bed1-f27c1a570554.png" 
+          name: "HP EliteBook 840 G5", 
+          description: "Intel Core i5, 8GB RAM, 256GB SSD, Windows 11", 
+          price: "Call for Price", 
+          image: "/lovable-uploads/0dcc4a15-5159-467a-8d75-6a1abb2675ab.png" 
         },
         { 
-          name: "MacBook Pro 16\"", 
-          description: "Apple M1 Pro chip, 16GB RAM, 512GB SSD, Space Gray", 
+          name: "HP Stream 11 Pro", 
+          description: "Intel Celeron, 4GB RAM, 64GB eMMC, Aqua Blue", 
           price: "Call for Price", 
-          image: "/lovable-uploads/55ba5704-9b6d-4a6d-8877-30b28ca314fc.png" 
+          image: "/lovable-uploads/1cb20b1d-6407-481d-bed6-7b6ddebfb1d3.png" 
+        },
+        { 
+          name: "MacBook Air 13\"", 
+          description: "Apple M1 chip, 8GB RAM, 256GB SSD, Silver", 
+          price: "Call for Price", 
+          image: "/lovable-uploads/e1cce7c9-87a0-40a4-9d05-0e0b7e9d2067.png" 
+        },
+        { 
+          name: "HP ProBook 450 G7", 
+          description: "Intel Core i7, 16GB RAM, 512GB SSD, Silver", 
+          price: "Call for Price", 
+          image: "/lovable-uploads/c15ed75d-ee7b-425a-bed2-210daceb6455.png" 
+        },
+        { 
+          name: "HP EliteBook x360", 
+          description: "Intel Core i5, 8GB RAM, 256GB SSD, Convertible", 
+          price: "Call for Price", 
+          image: "/lovable-uploads/cd4a1ed1-8959-4954-9c8f-0aa86b485500.png" 
         },
         { 
           name: "HP Laptop Silver", 
-          description: "Intel Core i5, 8GB RAM, 512GB SSD, Silver", 
+          description: "Intel Core i3, 4GB RAM, 1TB HDD, Silver", 
           price: "Call for Price", 
-          image: "/lovable-uploads/8e46c26b-816d-4b57-8737-e73fb0a1864d.png" 
+          image: "/lovable-uploads/ed795dbf-787a-43c8-ae82-b33317c0ee78.png" 
         }
       ]
     },
@@ -52,13 +70,19 @@ export const Products = () => {
     {
       title: "Accessories",
       description: "Essential tech accessories and gadgets",
-      image: "/lovable-uploads/626ca002-fba4-4226-be5a-783d178998f6.png",
+      image: "/lovable-uploads/d8a78e1c-7af2-48fa-a696-3a4d24667784.png",
       products: [
         { 
           name: "Mini Wireless Keyboard K-03", 
           description: "Compact design, Bluetooth connectivity, White", 
           price: "Call for Price", 
           image: "/lovable-uploads/626ca002-fba4-4226-be5a-783d178998f6.png" 
+        },
+        { 
+          name: "2.5G High Speed Network Card", 
+          description: "USB 3.0, 2500 Mbps, Lightning Fast Internet", 
+          price: "Call for Price", 
+          image: "/lovable-uploads/d8a78e1c-7af2-48fa-a696-3a4d24667784.png" 
         },
         { 
           name: "M.2 SSD External Enclosure", 
