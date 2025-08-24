@@ -4,39 +4,52 @@ export const openWhatsApp = (phoneNumber: string, message?: string) => {
   // Create different URL formats
   const wameUrl = `https://wa.me/${phoneNumber}${message ? `?text=${formattedMessage}` : ''}`;
   const whatsappProtocol = `whatsapp://send?phone=${phoneNumber}${message ? `&text=${formattedMessage}` : ''}`;
-  const webWhatsapp = `https://web.whatsapp.com/send?phone=${phoneNumber}${message ? `&text=${formattedMessage}` : ''}`;
   
-  // Function to try opening URL
-  const tryOpenUrl = (url: string, target: string = '_blank') => {
-    try {
-      const newWindow = window.open(url, target, 'noopener,noreferrer');
-      if (newWindow && !newWindow.closed) {
-        return true;
-      }
-    } catch (error) {
-      console.log('Failed to open:', url);
-    }
-    return false;
-  };
+  console.log('Attempting to open WhatsApp with:', { phoneNumber, message, wameUrl });
   
-  // Method 1: Try wa.me in new tab
-  if (tryOpenUrl(wameUrl)) return;
-  
-  // Method 2: Try WhatsApp protocol (for mobile apps)
-  if (tryOpenUrl(whatsappProtocol, '_self')) return;
-  
-  // Method 3: Try web WhatsApp
-  if (tryOpenUrl(webWhatsapp)) return;
-  
-  // Method 4: Force navigation to wa.me
+  // Try multiple methods
   try {
-    window.location.href = wameUrl;
+    // Method 1: Try wa.me in new tab
+    const newWindow = window.open(wameUrl, '_blank', 'noopener,noreferrer');
+    
+    if (newWindow && !newWindow.closed) {
+      console.log('WhatsApp opened successfully');
+      return;
+    }
   } catch (error) {
-    // Method 5: Ultimate fallback - copy number and show alert
-    navigator.clipboard?.writeText(phoneNumber).then(() => {
-      alert(`WhatsApp couldn't open automatically. Phone number ${phoneNumber} has been copied to clipboard. You can paste it in WhatsApp manually.`);
+    console.log('Method 1 failed:', error);
+  }
+  
+  try {
+    // Method 2: Try WhatsApp protocol
+    window.location.href = whatsappProtocol;
+    console.log('Trying WhatsApp protocol');
+    return;
+  } catch (error) {
+    console.log('Method 2 failed:', error);
+  }
+  
+  try {
+    // Method 3: Force navigation to wa.me
+    window.location.href = wameUrl;
+    console.log('Forcing navigation to wa.me');
+    return;
+  } catch (error) {
+    console.log('Method 3 failed:', error);
+  }
+  
+  // Method 4: Show user-friendly fallback
+  const phoneDisplay = phoneNumber.replace(/(\d{3})(\d{3})(\d{3})(\d{4})/, '+$1 $2 $3 $4');
+  const fallbackMessage = `WhatsApp couldn't open automatically in this environment.\n\nPlease contact us directly on WhatsApp:\n📱 ${phoneDisplay}\n\n${message ? `Message: ${message}` : 'Let us know what product you\'re interested in!'}`;
+  
+  alert(fallbackMessage);
+  
+  // Try to copy phone number to clipboard
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(phoneNumber).then(() => {
+      console.log('Phone number copied to clipboard');
     }).catch(() => {
-      alert(`Please contact us via WhatsApp at: ${phoneNumber}${message ? `\n\nMessage: ${message}` : ''}`);
+      console.log('Failed to copy to clipboard');
     });
   }
 };
