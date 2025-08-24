@@ -46,6 +46,7 @@ export const Products = () => {
   const handleWhatsAppContact = (productName: string) => {
     const message = `Hi! I'm interested in buying the ${productName}. Can you provide more information about price and availability?`;
     const phoneNumber = "2348139316493";
+    console.log(`Opening WhatsApp for ${productName} with number: ${phoneNumber}`);
     openWhatsApp(phoneNumber, message);
   };
 
