@@ -13,10 +13,12 @@ export const Products = () => {
       description: "Premium laptops from top brands",
       image: laptopImage,
       products: [
-        { name: "HP Pavilion 15", description: "Intel Core i5, 8GB RAM, 512GB SSD", price: "Call for Price" },
-        { name: "Dell Inspiron 14", description: "AMD Ryzen 7, 16GB RAM, 1TB SSD", price: "Call for Price" },
-        { name: "Lenovo ThinkPad E15", description: "Intel Core i7, 16GB RAM, 512GB SSD", price: "Call for Price" },
-        { name: "MacBook Air M2", description: "Apple M2 chip, 8GB RAM, 256GB SSD", price: "Call for Price" }
+        { name: "HP Pavilion 15-dy5855wm", description: "Intel Core i5, 8GB RAM, 512GB SSD, Windows 11", price: "Call for Price" },
+        { name: "MacBook Air M2", description: "Apple M2 chip, 8GB RAM, 256GB SSD, Silver", price: "Call for Price" },
+        { name: "MacBook Pro 13\"", description: "Apple M1 chip, 8GB RAM, 256GB SSD, Space Gray", price: "Call for Price" },
+        { name: "HP EliteBook", description: "Intel Core i7, 16GB RAM, 512GB SSD, Business Grade", price: "Call for Price" },
+        { name: "Lenovo ThinkPad", description: "Intel Core i5, 8GB RAM, 256GB SSD, Black", price: "Call for Price" },
+        { name: "MacBook Air 13\"", description: "Apple M1 chip, 8GB RAM, 512GB SSD, Gold", price: "Call for Price" }
       ]
     },
     {
@@ -24,21 +26,25 @@ export const Products = () => {
       description: "Latest smartphones and accessories",
       image: smartphoneImage,
       products: [
-        { name: "iPhone 15 Pro", description: "128GB, Titan Natural finish", price: "Call for Price" },
-        { name: "Samsung Galaxy S24", description: "256GB, Phantom Black", price: "Call for Price" },
-        { name: "Infinix Note 40", description: "128GB, Force Black", price: "Call for Price" },
-        { name: "Tecno Phantom V", description: "256GB, Obsidian Black", price: "Call for Price" }
+        { name: "iPhone 15 Pro Max", description: "256GB, Blue Titanium, A17 Pro chip", price: "Call for Price" },
+        { name: "iPhone 14", description: "128GB, Blue, iOS 16", price: "Call for Price" },
+        { name: "Samsung Galaxy Z Fold 5", description: "256GB, Phantom Black, Foldable Display", price: "Call for Price" },
+        { name: "Samsung Galaxy S24", description: "256GB, Phantom Black, AI Camera", price: "Call for Price" },
+        { name: "iPhone 13 Pro", description: "128GB, Sierra Blue, ProRAW Camera", price: "Call for Price" },
+        { name: "Samsung Galaxy Note", description: "256GB, Mystic Bronze, S Pen included", price: "Call for Price" }
       ]
     },
     {
       title: "Accessories",
-      description: "Essential tech accessories",
+      description: "Essential tech accessories and gadgets",
       image: accessoriesImage,
       products: [
-        { name: "Wireless Keyboard & Mouse", description: "Ergonomic design, long battery life", price: "Call for Price" },
-        { name: "External Hard Drive 2TB", description: "USB 3.0, portable storage", price: "Call for Price" },
-        { name: "Universal Laptop Charger", description: "Compatible with major brands", price: "Call for Price" },
-        { name: "Wireless Printer", description: "All-in-one, WiFi enabled", price: "Call for Price" }
+        { name: "Mini Wireless Keyboard K-03", description: "Compact design, Bluetooth connectivity, White", price: "Call for Price" },
+        { name: "USB GPS Module U-blox7", description: "GPS/GLONASS navigation, Automotive & Marine use", price: "Call for Price" },
+        { name: "Wireless Mouse & Keyboard Set", description: "Ergonomic design, long battery life", price: "Call for Price" },
+        { name: "External Hard Drive 2TB", description: "USB 3.0, portable storage, Black", price: "Call for Price" },
+        { name: "Universal Laptop Charger", description: "Compatible with HP, Dell, Lenovo", price: "Call for Price" },
+        { name: "Laptop Cooling Pad", description: "LED fans, adjustable height, USB powered", price: "Call for Price" }
       ]
     }
   ];
