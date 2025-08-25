@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ShoppingCart } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 import heroImage from "@/assets/hero-tech.jpg";
 import laptopHero from "@/assets/laptop-hero.jpg";
 import smartphoneHero from "@/assets/smartphone-hero.jpg";
@@ -30,7 +31,16 @@ export const Hero = () => {
 
   return (
     <section className="relative min-h-screen overflow-hidden">
-      <Carousel className="w-full h-screen" opts={{ loop: true, duration: 30 }}>
+      <Carousel 
+        className="w-full h-screen" 
+        opts={{ loop: true, align: "start" }}
+        plugins={[
+          Autoplay({
+            delay: 4000,
+            stopOnInteraction: true,
+          }),
+        ]}
+      >
         <CarouselContent>
           {slides.map((slide, index) => (
             <CarouselItem key={index}>
