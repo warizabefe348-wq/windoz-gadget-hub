@@ -121,7 +121,7 @@ export const Products = () => {
                   <img 
                     src={category.image} 
                     alt={category.title}
-                    className="w-full h-64 object-cover rounded-lg shadow-lg hover-scale transition-all duration-300"
+                    className="w-full h-64 object-contain bg-background rounded-lg shadow-lg hover-scale transition-all duration-300"
                   />
                 </div>
                 <div className="lg:w-2/3">
@@ -133,11 +133,11 @@ export const Products = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 stagger-children">
                 {category.products.map((product, productIndex) => (
                   <Card key={productIndex} className="card-elevated hover:shadow-lg transition-all duration-300 hover-scale animate-fade-in group">
-                    <div className="relative overflow-hidden rounded-t-lg">
+                    <div className="relative overflow-hidden rounded-t-lg bg-background p-4">
                       <img 
                         src={product.image} 
                         alt={product.name}
-                        className="w-full h-48 object-cover group-hover:scale-105 transition-all duration-300"
+                        className="w-full h-48 object-contain group-hover:scale-105 transition-all duration-300"
                       />
                     </div>
                     <CardHeader>
