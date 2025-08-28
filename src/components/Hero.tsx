@@ -2,12 +2,17 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, ShoppingCart } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
+import { useRef } from "react";
 import heroImage from "@/assets/hero-tech.jpg";
 import laptopHero from "@/assets/laptop-hero.jpg";
 import smartphoneHero from "@/assets/smartphone-hero.jpg";
 import accessoriesHero from "@/assets/accessories-hero.jpg";
 
 export const Hero = () => {
+  const plugin = useRef(
+    Autoplay({ delay: 4000, stopOnInteraction: true })
+  );
+
   const slides = [
     {
       image: heroImage,
@@ -34,12 +39,7 @@ export const Hero = () => {
       <Carousel 
         className="w-full h-screen" 
         opts={{ loop: true, align: "start" }}
-        plugins={[
-          Autoplay({
-            delay: 4000,
-            stopOnInteraction: true,
-          }),
-        ]}
+        plugins={[plugin.current]}
       >
         <CarouselContent>
           {slides.map((slide, index) => (
