@@ -1,0 +1,36 @@
+import { Card } from "@/components/ui/card";
+
+export const VideoSection = () => {
+  return (
+    <section className="py-20 bg-gradient-to-br from-background to-secondary/20">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-foreground mb-4">
+            See Our Technology in Action
+          </h2>
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            Watch how we bring cutting-edge technology solutions to life
+          </p>
+        </div>
+        
+        <div className="max-w-4xl mx-auto">
+          <Card className="overflow-hidden card-elevated">
+            <div className="aspect-video w-full">
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/08TUXIY_x9s"
+                title="Windoz Tech Global Gadgets - Technology Solutions"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+                className="w-full h-full"
+              ></iframe>
+            </div>
+          </Card>
+        </div>
+      </div>
+    </section>
+  );
+};
