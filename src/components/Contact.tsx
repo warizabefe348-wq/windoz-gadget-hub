@@ -54,7 +54,13 @@ export const Contact = () => {
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-base mb-4 leading-relaxed">
-                  {info.details}
+                  {index === 2 ? (
+                    <>
+                      <span className="font-windoz">Windoz</span>osynachi1@gmail.com
+                    </>
+                  ) : (
+                    info.details
+                  )}
                 </CardDescription>
                 <Button variant="outline" className="w-full">
                   {info.action}

@@ -29,11 +29,11 @@ export const About = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            About <span className="text-primary">Windoz Tech Global Gadgets</span>
+            About <span className="text-primary font-windoz">Windoz</span> Tech Global Gadgets
           </h2>
           
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-            Windoz Tech Global Gadgets is a leading electronics and IT service company located in Victoria Island, Lagos. 
+            <span className="font-windoz">Windoz</span> Tech Global Gadgets is a leading electronics and IT service company located in Victoria Island, Lagos. 
             We specialize in the sales of laptops, smartphones, and accessories, as well as offering professional IT consulting, 
             software upgrades, and hardware repairs. Our mission is to provide customers with affordable, reliable, 
             and top-quality technology solutions.

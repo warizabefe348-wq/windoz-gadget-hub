@@ -11,7 +11,7 @@ const LoadingSpinner = () => {
         <div className="relative">
           <img 
             src="/lovable-uploads/f140baa2-b5bd-42f0-90e4-ba9c518a9342.png" 
-            alt="Windoz Tech Logo" 
+              alt="Windoz Tech Logo"
             className="h-16 w-auto animate-spin-slow"
           />
           <div className="absolute inset-0 rounded-full animate-pulse-glow bg-primary/20"></div>

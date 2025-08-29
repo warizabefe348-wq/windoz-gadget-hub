@@ -29,7 +29,7 @@ export const Footer = () => {
                 className="h-12 w-auto hover-scale"
               />
               <div>
-                <h3 className="text-lg font-bold text-primary">Windoz Tech</h3>
+                <h3 className="text-lg font-bold text-primary"><span className="font-windoz">Windoz</span> Tech</h3>
                 <p className="text-sm text-muted-foreground">Global Gadgets</p>
               </div>
             </div>
@@ -120,7 +120,7 @@ export const Footer = () => {
         <div className="border-t mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-muted-foreground">
-              © 2024 Windoz Tech Global Gadgets. All rights reserved.
+              © 2024 <span className="font-windoz">Windoz</span> Tech Global Gadgets. All rights reserved.
             </p>
             <div className="flex gap-6 text-sm text-muted-foreground">
               <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>

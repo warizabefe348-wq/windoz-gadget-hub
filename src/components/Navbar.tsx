@@ -39,7 +39,7 @@ export const Navbar = () => {
               className="h-10 w-auto transition-transform duration-300 hover:rotate-12"
             />
             <div className="hidden sm:block">
-              <h1 className="text-lg font-bold text-primary">Windoz Tech</h1>
+              <h1 className="text-lg font-bold text-primary"><span className="font-windoz">Windoz</span> Tech</h1>
               <p className="text-xs text-muted-foreground">Global Gadgets</p>
             </div>
           </Link>

@@ -29,7 +29,7 @@ export const WhyChooseUs = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Why Choose <span className="text-primary">Windoz Tech</span>?
+            Why Choose <span className="text-primary font-windoz">Windoz</span> Tech?
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
             We're committed to providing exceptional service and quality products that exceed your expectations
