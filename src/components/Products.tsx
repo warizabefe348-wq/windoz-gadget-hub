@@ -222,6 +222,159 @@ export const Products = () => {
             </div>
           ))}
         </div>
+
+        {/* Professional Repair Services Section */}
+        <div className="mt-20 bg-gradient-to-br from-primary/5 to-secondary/10 rounded-3xl p-12 relative overflow-hidden">
+          <div className="absolute top-4 right-4 bg-gradient-to-r from-green-600 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-bold animate-pulse">
+            🔧 EXPERT REPAIR SERVICES
+          </div>
+          
+          <div className="text-center mb-12">
+            <h3 className="text-4xl font-bold text-foreground mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+              🛠️ Professional Laptop Repair Services 🛠️
+            </h3>
+            <p className="text-xl text-muted-foreground max-w-4xl mx-auto font-medium mb-8">
+              ⚡ Expert motherboard repairs • Component-level diagnostics • Data recovery • Hardware upgrades ⚡
+            </p>
+            <div className="flex flex-wrap justify-center gap-4 mb-8">
+              <div className="bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-semibold">
+                🔬 Microscopic Precision Repairs
+              </div>
+              <div className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold">
+                ⚡ Same Day Turnaround
+              </div>
+              <div className="bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-semibold">
+                💾 Data Recovery Specialists
+              </div>
+              <div className="bg-orange-100 text-orange-800 px-4 py-2 rounded-full text-sm font-semibold">
+                🛡️ 6-Month Warranty
+              </div>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            {/* Repair Service Cards */}
+            <Card className="card-elevated hover:shadow-2xl transition-all duration-300 hover-scale bg-white/80 backdrop-blur-sm border-2 border-primary/20 hover:border-primary/50">
+              <div className="relative overflow-hidden rounded-t-lg bg-gradient-to-br from-background to-secondary/10 p-6">
+                <img 
+                  src="/lovable-uploads/a16e0419-656b-4e54-bded-e41cd7c8fa0a.png" 
+                  alt="Motherboard Repair Service"
+                  className="w-full h-48 object-cover rounded-lg shadow-lg hover:scale-110 transition-all duration-500"
+                />
+                <div className="absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded-full text-xs font-bold animate-pulse">
+                  🔬 MICRO REPAIRS
+                </div>
+              </div>
+              <CardHeader>
+                <CardTitle className="text-lg font-bold bg-gradient-to-r from-foreground to-primary/80 bg-clip-text">
+                  🔧 Motherboard Repair Specialist
+                </CardTitle>
+                <CardDescription className="text-sm leading-relaxed">
+                  ✅ Component-level repairs • IC replacement • Circuit tracing • Power delivery fixes
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <Button 
+                  className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-3"
+                  onClick={() => handleWhatsAppContact("Motherboard Repair Service")}
+                >
+                  🔬 Get Expert Diagnosis
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="card-elevated hover:shadow-2xl transition-all duration-300 hover-scale bg-white/80 backdrop-blur-sm border-2 border-primary/20 hover:border-primary/50">
+              <div className="relative overflow-hidden rounded-t-lg bg-gradient-to-br from-background to-secondary/10 p-6">
+                <img 
+                  src="/lovable-uploads/ac73be9b-e85a-4e7a-9b2e-8f6e654f3c8b.png" 
+                  alt="Professional Repair Workstation"
+                  className="w-full h-48 object-cover rounded-lg shadow-lg hover:scale-110 transition-all duration-500"
+                />
+                <div className="absolute top-2 right-2 bg-green-500 text-white px-2 py-1 rounded-full text-xs font-bold animate-pulse">
+                  ⚡ PROFESSIONAL
+                </div>
+              </div>
+              <CardHeader>
+                <CardTitle className="text-lg font-bold bg-gradient-to-r from-foreground to-primary/80 bg-clip-text">
+                  🏭 Professional Workstation Setup
+                </CardTitle>
+                <CardDescription className="text-sm leading-relaxed">
+                  🔬 Advanced diagnostic tools • Clean room environment • ESD-safe procedures
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <Button 
+                  className="w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold py-3"
+                  onClick={() => handleWhatsAppContact("Professional Repair Service")}
+                >
+                  🏭 Book Professional Service
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="card-elevated hover:shadow-2xl transition-all duration-300 hover-scale bg-white/80 backdrop-blur-sm border-2 border-primary/20 hover:border-primary/50">
+              <div className="relative overflow-hidden rounded-t-lg bg-gradient-to-br from-background to-secondary/10 p-6">
+                <img 
+                  src="/lovable-uploads/3ce31378-0201-4bd9-a951-c8e21d97c739.png" 
+                  alt="HP EliteBook 840 G2 Repair"
+                  className="w-full h-48 object-cover rounded-lg shadow-lg hover:scale-110 transition-all duration-500"
+                />
+                <div className="absolute top-2 right-2 bg-blue-500 text-white px-2 py-1 rounded-full text-xs font-bold animate-pulse">
+                  💼 BUSINESS
+                </div>
+              </div>
+              <CardHeader>
+                <CardTitle className="text-lg font-bold bg-gradient-to-r from-foreground to-primary/80 bg-clip-text">
+                  💼 Business Laptop Specialists
+                </CardTitle>
+                <CardDescription className="text-sm leading-relaxed">
+                  🚀 HP EliteBook • Dell Latitude • Lenovo ThinkPad • Enterprise-grade repairs
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <Button 
+                  className="w-full bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white font-bold py-3"
+                  onClick={() => handleWhatsAppContact("Business Laptop Repair")}
+                >
+                  💼 Enterprise Support
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="text-center">
+            <h4 className="text-2xl font-bold text-foreground mb-4">🏆 Why Choose Our Repair Services? 🏆</h4>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+              <div className="bg-white/80 backdrop-blur-sm p-6 rounded-lg border-2 border-primary/20">
+                <div className="text-3xl mb-2">🔬</div>
+                <h5 className="font-bold text-foreground mb-2">Microscopic Precision</h5>
+                <p className="text-sm text-muted-foreground">Component-level repairs with professional equipment</p>
+              </div>
+              <div className="bg-white/80 backdrop-blur-sm p-6 rounded-lg border-2 border-primary/20">
+                <div className="text-3xl mb-2">⚡</div>
+                <h5 className="font-bold text-foreground mb-2">Lightning Fast</h5>
+                <p className="text-sm text-muted-foreground">Most repairs completed same day</p>
+              </div>
+              <div className="bg-white/80 backdrop-blur-sm p-6 rounded-lg border-2 border-primary/20">
+                <div className="text-3xl mb-2">🛡️</div>
+                <h5 className="font-bold text-foreground mb-2">6-Month Warranty</h5>
+                <p className="text-sm text-muted-foreground">Full warranty on all repair work</p>
+              </div>
+              <div className="bg-white/80 backdrop-blur-sm p-6 rounded-lg border-2 border-primary/20">
+                <div className="text-3xl mb-2">💾</div>
+                <h5 className="font-bold text-foreground mb-2">Data Recovery</h5>
+                <p className="text-sm text-muted-foreground">Specialized in recovering important data</p>
+              </div>
+            </div>
+            
+            <Button 
+              className="bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 text-white font-bold px-12 py-4 text-lg rounded-full shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300"
+              onClick={() => handleWhatsAppContact("Repair Services Consultation")}
+            >
+              🚨 GET INSTANT REPAIR QUOTE! 🚨
+            </Button>
+          </div>
+        </div>
       </div>
     </section>
   );
