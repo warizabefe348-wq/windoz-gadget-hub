@@ -3,6 +3,7 @@ import { ArrowRight, ShoppingCart } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import { useRef } from "react";
+import { openWhatsApp } from "@/utils/whatsapp";
 import heroImage from "@/assets/hero-tech.jpg";
 import laptopHero from "@/assets/laptop-hero.jpg";
 import smartphoneHero from "@/assets/smartphone-hero.jpg";
@@ -12,6 +13,18 @@ export const Hero = () => {
   const plugin = useRef(
     Autoplay({ delay: 4000, stopOnInteraction: true })
   );
+
+  const handleShopNow = () => {
+    const productsSection = document.getElementById('products');
+    if (productsSection) {
+      productsSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleContactUs = () => {
+    const message = "Hi! I'm interested in your products and services.";
+    openWhatsApp('2348139316493', message);
+  };
 
   const slides = [
     {
@@ -73,6 +86,7 @@ export const Hero = () => {
                         size="lg" 
                         variant="secondary"
                         className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-8 py-4 text-lg glow"
+                        onClick={handleShopNow}
                       >
                         <ShoppingCart className="mr-2 h-5 w-5" />
                         Shop Now
@@ -82,6 +96,7 @@ export const Hero = () => {
                         size="lg" 
                         variant="outline"
                         className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold px-8 py-4 text-lg"
+                        onClick={handleContactUs}
                       >
                         Contact Us
                         <ArrowRight className="ml-2 h-5 w-5" />
