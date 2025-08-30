@@ -38,6 +38,27 @@ export const Products = () => {
           price: "💵 Volume Pricing Available!", 
           image: "/lovable-uploads/f32c8963-b8ec-4b8d-845a-887c5744e43f.png",
           badge: "📦 BULK DEALS"
+        },
+        { 
+          name: "HP 14 inch Laptop PC 💻", 
+          description: "📦 Brand New in Box • Latest Model • Full Warranty • Business Ready", 
+          price: "🎯 Unbeatable Value!", 
+          image: "/lovable-uploads/39271500-3d4b-425d-a533-9a96547d0f72.png",
+          badge: "📦 NEW SEALED"
+        },
+        { 
+          name: "HP ENVY x360 Collection ⚡", 
+          description: "🔄 2-in-1 Design • Touch Screen • Premium Build • Multiple Units", 
+          price: "✨ Convertible Excellence!", 
+          image: "/lovable-uploads/3a1695e9-67e1-40a5-9998-8681ac96781c.png",
+          badge: "🔄 CONVERTIBLE"
+        },
+        { 
+          name: "HP Elite Laptop Stack 💼", 
+          description: "📚 Bulk Professional Laptops • Enterprise Grade • Volume Discounts", 
+          price: "💼 Business Volume Deals!", 
+          image: "/lovable-uploads/5a90c3d8-3d42-4cc6-ad01-23952e61ae16.png",
+          badge: "💼 ENTERPRISE"
         }
       ]
     },
@@ -60,6 +81,13 @@ export const Products = () => {
           price: "🔥 Limited Time Offer!", 
           image: "/lovable-uploads/bac8453a-a012-4148-bb8b-7ef56b418219.png",
           badge: "🌟 HOT DEAL"
+        },
+        { 
+          name: "Samsung Galaxy Z Fold 📱", 
+          description: "🔥 Foldable Display • Latest Technology • Premium Design • Like New", 
+          price: "💎 Exclusive Foldable Experience!", 
+          image: "/lovable-uploads/9cc98078-76e8-4251-baeb-0c672465f81c.png",
+          badge: "🔄 FOLDABLE"
         }
       ]
     },
@@ -96,6 +124,20 @@ export const Products = () => {
           price: "💽 Expand Your Storage Now!", 
           image: "/lovable-uploads/f1c70230-8a0d-479e-a81d-f8b2338964b1.png",
           badge: "💾 STORAGE PRO"
+        },
+        { 
+          name: "Amazon Fire TV Stick 📺", 
+          description: "🎬 4K Streaming • Voice Remote • All Apps • Perfect Entertainment", 
+          price: "🍿 Stream Everything Now!", 
+          image: "/lovable-uploads/73359e0c-afc0-48b8-a3b5-cc9ce6df74db.png",
+          badge: "📺 STREAMING"
+        },
+        { 
+          name: "Laptop Parts & Components 🔧", 
+          description: "⚙️ Professional Grade Parts • RAM, Storage, Components • Bulk Available", 
+          price: "🔧 Upgrade Your System!", 
+          image: "/lovable-uploads/bca99ab1-c3a0-4724-988e-bc9cfb975f6b.png",
+          badge: "⚙️ COMPONENTS"
         }
       ]
     }
@@ -337,6 +379,125 @@ export const Products = () => {
                   onClick={() => handleWhatsAppContact("Business Laptop Repair")}
                 >
                   💼 Enterprise Support
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Additional Repair Service Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+            <Card className="card-elevated hover:shadow-2xl transition-all duration-300 hover-scale bg-white/80 backdrop-blur-sm border-2 border-primary/20 hover:border-primary/50">
+              <div className="relative overflow-hidden rounded-t-lg bg-gradient-to-br from-background to-secondary/10 p-6">
+                <img 
+                  src="/lovable-uploads/6a934679-7118-4dc6-aea6-4da7fdfc23cb.png" 
+                  alt="Motherboard Component Repair"
+                  className="w-full h-48 object-cover rounded-lg shadow-lg hover:scale-110 transition-all duration-500"
+                />
+                <div className="absolute top-2 right-2 bg-cyan-500 text-white px-2 py-1 rounded-full text-xs font-bold animate-pulse">
+                  🔬 MICRO-LEVEL
+                </div>
+              </div>
+              <CardHeader>
+                <CardTitle className="text-lg font-bold bg-gradient-to-r from-foreground to-primary/80 bg-clip-text">
+                  🔬 Advanced Component Repair
+                </CardTitle>
+                <CardDescription className="text-sm leading-relaxed">
+                  ⚡ Micro-level repairs • BGA reballing • Component replacement • Circuit diagnostics
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <Button 
+                  className="w-full bg-gradient-to-r from-cyan-600 to-cyan-700 hover:from-cyan-700 hover:to-cyan-800 text-white font-bold py-3"
+                  onClick={() => handleWhatsAppContact("Advanced Component Repair")}
+                >
+                  🔬 Micro Repair Service
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="card-elevated hover:shadow-2xl transition-all duration-300 hover-scale bg-white/80 backdrop-blur-sm border-2 border-primary/20 hover:border-primary/50">
+              <div className="relative overflow-hidden rounded-t-lg bg-gradient-to-br from-background to-secondary/10 p-6">
+                <img 
+                  src="/lovable-uploads/0a17b30c-e447-4d85-b220-588b276fdfea.png" 
+                  alt="Motherboard Memory Repair"
+                  className="w-full h-48 object-cover rounded-lg shadow-lg hover:scale-110 transition-all duration-500"
+                />
+                <div className="absolute top-2 right-2 bg-emerald-500 text-white px-2 py-1 rounded-full text-xs font-bold animate-pulse">
+                  💚 MEMORY
+                </div>
+              </div>
+              <CardHeader>
+                <CardTitle className="text-lg font-bold bg-gradient-to-r from-foreground to-primary/80 bg-clip-text">
+                  💚 Memory & Storage Repair
+                </CardTitle>
+                <CardDescription className="text-sm leading-relaxed">
+                  📦 RAM slot repair • Storage controller fixes • Data recovery • Performance optimization
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <Button 
+                  className="w-full bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-700 hover:to-emerald-800 text-white font-bold py-3"
+                  onClick={() => handleWhatsAppContact("Memory Storage Repair")}
+                >
+                  💚 Memory Repair Service
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="card-elevated hover:shadow-2xl transition-all duration-300 hover-scale bg-white/80 backdrop-blur-sm border-2 border-primary/20 hover:border-primary/50">
+              <div className="relative overflow-hidden rounded-t-lg bg-gradient-to-br from-background to-secondary/10 p-6">
+                <img 
+                  src="/lovable-uploads/7ce5c41c-df7c-444f-bd6e-f5ec16f6317a.png" 
+                  alt="Dell Laptop Internal Repair"
+                  className="w-full h-48 object-cover rounded-lg shadow-lg hover:scale-110 transition-all duration-500"
+                />
+                <div className="absolute top-2 right-2 bg-indigo-500 text-white px-2 py-1 rounded-full text-xs font-bold animate-pulse">
+                  🔋 INTERNAL
+                </div>
+              </div>
+              <CardHeader>
+                <CardTitle className="text-lg font-bold bg-gradient-to-r from-foreground to-primary/80 bg-clip-text">
+                  🔋 Internal Component Service
+                </CardTitle>
+                <CardDescription className="text-sm leading-relaxed">
+                  🔧 Battery replacement • Internal cleaning • Thermal management • Complete overhaul
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <Button 
+                  className="w-full bg-gradient-to-r from-indigo-600 to-indigo-700 hover:from-indigo-700 hover:to-indigo-800 text-white font-bold py-3"
+                  onClick={() => handleWhatsAppContact("Internal Component Service")}
+                >
+                  🔋 Internal Service
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="card-elevated hover:shadow-2xl transition-all duration-300 hover-scale bg-white/80 backdrop-blur-sm border-2 border-primary/20 hover:border-primary/50">
+              <div className="relative overflow-hidden rounded-t-lg bg-gradient-to-br from-background to-secondary/10 p-6">
+                <img 
+                  src="/lovable-uploads/92f39cad-902c-475b-925a-9e882609b31d.png" 
+                  alt="HP ENVY Premium Repair"
+                  className="w-full h-48 object-cover rounded-lg shadow-lg hover:scale-110 transition-all duration-500"
+                />
+                <div className="absolute top-2 right-2 bg-rose-500 text-white px-2 py-1 rounded-full text-xs font-bold animate-pulse">
+                  ✨ PREMIUM
+                </div>
+              </div>
+              <CardHeader>
+                <CardTitle className="text-lg font-bold bg-gradient-to-r from-foreground to-primary/80 bg-clip-text">
+                  ✨ Premium Laptop Service
+                </CardTitle>
+                <CardDescription className="text-sm leading-relaxed">
+                  💎 High-end laptop repairs • ENVY series • Premium care • White glove service
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <Button 
+                  className="w-full bg-gradient-to-r from-rose-600 to-rose-700 hover:from-rose-700 hover:to-rose-800 text-white font-bold py-3"
+                  onClick={() => handleWhatsAppContact("Premium Laptop Service")}
+                >
+                  ✨ Premium Service
                 </Button>
               </CardContent>
             </Card>
