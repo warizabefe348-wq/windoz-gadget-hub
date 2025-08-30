@@ -59,6 +59,34 @@ export const Products = () => {
           price: "💼 Business Volume Deals!", 
           image: "/lovable-uploads/5a90c3d8-3d42-4cc6-ad01-23952e61ae16.png",
           badge: "💼 ENTERPRISE"
+        },
+        { 
+          name: "MacBook Air M1 💙", 
+          description: "🍎 Apple M1 Chip • 8GB RAM • 256GB SSD • Stunning Blue Finish • Like New", 
+          price: "🌟 Premium Apple Experience!", 
+          image: "/lovable-uploads/d43f25cc-41c0-40cd-9132-f2f2f97144f6.png",
+          badge: "🍎 M1 CHIP"
+        },
+        { 
+          name: "MacBook Air Silver Edition ⚡", 
+          description: "✨ Latest macOS • Retina Display • All Day Battery • Perfect Condition", 
+          price: "🚀 Lightning Fast Performance!", 
+          image: "/lovable-uploads/20c2789a-8f1b-47e5-a148-99072adc5c93.png",
+          badge: "⚡ RETINA"
+        },
+        { 
+          name: "MacBook Brand New Sealed 📦", 
+          description: "🆕 Factory Sealed • Original Packaging • Full Warranty • Space Gray", 
+          price: "🎁 Brand New Guarantee!", 
+          image: "/lovable-uploads/be4e9e66-7963-48e2-bcf8-0aab3e2f1f4b.png",
+          badge: "🆕 SEALED"
+        },
+        { 
+          name: "MacBook Pro 14-inch 🖥️", 
+          description: "💎 Professional Grade • M1 Pro/Max • Liquid Retina XDR • Studio Quality", 
+          price: "🏆 Pro Performance Beast!", 
+          image: "/lovable-uploads/056de4da-b48e-480b-a7c9-0981544b6f9e.png",
+          badge: "💎 PRO MAX"
         }
       ]
     },
@@ -498,6 +526,35 @@ export const Products = () => {
                   onClick={() => handleWhatsAppContact("Premium Laptop Service")}
                 >
                   ✨ Premium Service
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="card-elevated hover:shadow-2xl transition-all duration-300 hover-scale bg-white/80 backdrop-blur-sm border-2 border-primary/20 hover:border-primary/50">
+              <div className="relative overflow-hidden rounded-t-lg bg-gradient-to-br from-background to-secondary/10 p-6">
+                <img 
+                  src="/lovable-uploads/72d9cb5d-07b7-4b43-9ef5-c00c5f8c2c8c.png" 
+                  alt="HP Laptop Professional Repair"
+                  className="w-full h-48 object-cover rounded-lg shadow-lg hover:scale-110 transition-all duration-500"
+                />
+                <div className="absolute top-2 right-2 bg-yellow-500 text-white px-2 py-1 rounded-full text-xs font-bold animate-pulse">
+                  🔧 REPAIR
+                </div>
+              </div>
+              <CardHeader>
+                <CardTitle className="text-lg font-bold bg-gradient-to-r from-foreground to-primary/80 bg-clip-text">
+                  🔧 HP Professional Repair
+                </CardTitle>
+                <CardDescription className="text-sm leading-relaxed">
+                  🛠️ Complete disassembly • Component diagnostics • HP specialist service • Full restoration
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <Button 
+                  className="w-full bg-gradient-to-r from-yellow-600 to-yellow-700 hover:from-yellow-700 hover:to-yellow-800 text-white font-bold py-3"
+                  onClick={() => handleWhatsAppContact("HP Professional Repair")}
+                >
+                  🔧 HP Repair Service
                 </Button>
               </CardContent>
             </Card>
