@@ -13,13 +13,13 @@ export const VideoSection = () => {
           </p>
         </div>
         
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-2xl mx-auto">
           <Card className="overflow-hidden card-elevated">
-            <div className="aspect-video w-full">
+            <div className="aspect-[9/16] w-full max-h-[600px]">
               <iframe
                 width="100%"
                 height="100%"
-                src="https://www.youtube.com/embed/rDNkvC93wDo"
+                src="https://www.youtube.com/embed/rDNkvC93wDo?si=thCbhSVCTsihA0sX"
                 title="Windoz Tech Global Gadgets - Technology Solutions"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
