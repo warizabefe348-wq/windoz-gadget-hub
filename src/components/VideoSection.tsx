@@ -36,7 +36,7 @@ export const VideoSection = () => {
                 <iframe
                   width="100%"
                   height="100%"
-                  src="https://www.youtube.com/embed/-Do9i6yrsVU"
+                  src="https://www.youtube-nocookie.com/embed/-Do9i6yrsVU?autoplay=0&mute=0&controls=1&loop=0"
                   title="Windoz Tech Global Gadgets - Technology Solutions"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
