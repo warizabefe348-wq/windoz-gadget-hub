@@ -13,22 +13,40 @@ export const VideoSection = () => {
           </p>
         </div>
         
-        <div className="max-w-2xl mx-auto">
-          <Card className="overflow-hidden card-elevated">
-            <div className="aspect-[9/16] w-full max-h-[600px]">
-              <iframe
-                width="100%"
-                height="100%"
-                src="https://www.youtube.com/embed/rDNkvC93wDo?si=thCbhSVCTsihA0sX"
-                title="Windoz Tech Global Gadgets - Technology Solutions"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-                className="w-full h-full"
-              ></iframe>
-            </div>
-          </Card>
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <Card className="overflow-hidden card-elevated">
+              <div className="aspect-[9/16] w-full max-h-[600px]">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/rDNkvC93wDo?si=thCbhSVCTsihA0sX"
+                  title="Windoz Tech Global Gadgets - Technology Solutions"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                  className="w-full h-full"
+                ></iframe>
+              </div>
+            </Card>
+            
+            <Card className="overflow-hidden card-elevated">
+              <div className="aspect-[9/16] w-full max-h-[600px]">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/-Do9i6yrsVU?si=VQJtf0TBZq2Bm1qg"
+                  title="Windoz Tech Global Gadgets - Technology Solutions"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                  className="w-full h-full"
+                ></iframe>
+              </div>
+            </Card>
+          </div>
         </div>
       </div>
     </section>
