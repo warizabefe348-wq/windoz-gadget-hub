@@ -20,7 +20,7 @@ export const VideoSection = () => {
                 <iframe
                   width="100%"
                   height="100%"
-                  src="https://www.youtube.com/embed/rDNkvC93wDo?si=thCbhSVCTsihA0sX"
+                  src="https://www.youtube.com/embed/rDNkvC93wDo"
                   title="Windoz Tech Global Gadgets - Technology Solutions"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -36,7 +36,7 @@ export const VideoSection = () => {
                 <iframe
                   width="100%"
                   height="100%"
-                  src="https://www.youtube.com/embed/-Do9i6yrsVU?si=VQJtf0TBZq2Bm1qg"
+                  src="https://www.youtube.com/embed/-Do9i6yrsVU"
                   title="Windoz Tech Global Gadgets - Technology Solutions"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
