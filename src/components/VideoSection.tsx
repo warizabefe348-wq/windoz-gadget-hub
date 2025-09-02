@@ -13,30 +13,14 @@ export const VideoSection = () => {
           </p>
         </div>
         
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="max-w-4xl mx-auto">
+          <div className="flex justify-center">
             <Card className="overflow-hidden card-elevated">
-              <div className="aspect-[9/16] w-full max-h-[600px]">
+              <div className="aspect-[9/16] w-full max-w-md max-h-[600px]">
                 <iframe
                   width="100%"
                   height="100%"
                   src="https://www.youtube.com/embed/rDNkvC93wDo"
-                  title="Windoz Tech Global Gadgets - Technology Solutions"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerPolicy="strict-origin-when-cross-origin"
-                  allowFullScreen
-                  className="w-full h-full"
-                ></iframe>
-              </div>
-            </Card>
-            
-            <Card className="overflow-hidden card-elevated">
-              <div className="aspect-[9/16] w-full max-h-[600px]">
-                <iframe
-                  width="100%"
-                  height="100%"
-                  src="https://www.youtube-nocookie.com/embed/-Do9i6yrsVU?autoplay=0&mute=0&controls=1&loop=0"
                   title="Windoz Tech Global Gadgets - Technology Solutions"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
